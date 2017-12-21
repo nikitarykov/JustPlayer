@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="cover_width">60dp</dimen>
+	<dimen name="cover_height">60dp</dimen>
+</resources>

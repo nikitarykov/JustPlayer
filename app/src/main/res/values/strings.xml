@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">JustPlayer</string>
+	<string name="msg_sorry">Извините, без разрешения дальнейшая работа приложения невозможна!</string>
+	<string name="albumart_uri">content://media/external/audio/albumart</string>
+</resources>
