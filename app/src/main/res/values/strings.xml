@@ -2,4 +2,7 @@
 	<string name="app_name">JustPlayer</string>
 	<string name="msg_sorry">Извините, без разрешения дальнейшая работа приложения невозможна!</string>
 	<string name="albumart_uri">content://media/external/audio/albumart</string>
+	<string name="notification_channel_id">com.example.nikitarykov.justplayer.NotificationChannelId</string>
+	<string name="notification_channel_name">Player Notification</string>
+	<string name="notification_channel_description">Уведомление для контроля воспроизведения в бэкграунде</string>
 </resources>

@@ -1,5 +1,6 @@
-package com.example.nikitarykov.justplayer;
+package com.example.nikitarykov.justplayer.common;
 
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -9,10 +10,14 @@ import java.util.concurrent.TimeUnit;
 public class ProgressUtils {
 
     public static String milliSecondsToDuration(long milliseconds) {
-        return String.format("%02d:%02d",
+        return String.format(Locale.ENGLISH, "%02d:%02d",
                 TimeUnit.MILLISECONDS.toMinutes(milliseconds),
                 TimeUnit.MILLISECONDS.toSeconds(milliseconds) -
                         TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(milliseconds)));
+    }
+
+    public static int positionToProgress(int position) {
+        return position / 1000;
     }
 
     public static int getProgressPercentage(long currentDuration, long totalDuration) {

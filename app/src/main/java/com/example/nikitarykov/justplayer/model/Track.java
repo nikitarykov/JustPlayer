@@ -1,4 +1,4 @@
-package com.example.nikitarykov.justplayer;
+package com.example.nikitarykov.justplayer.model;
 
 import android.graphics.Bitmap;
 
@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
  * Created by Nikita Rykov on 29.09.2017.
  */
 
-public class AudioItem {
+public class Track {
 	private long id;
 	private int duration;
 	private String data;
