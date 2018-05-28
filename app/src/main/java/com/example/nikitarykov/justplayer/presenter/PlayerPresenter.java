@@ -148,8 +148,9 @@ public class PlayerPresenter extends MvpPresenter<PlayerView> implements AudioMa
     public void stop() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.stop();
-            setMediaPlaybackState(PlaybackStateCompat.STATE_PAUSED);
+            setMediaPlaybackState(PlaybackStateCompat.STATE_STOPPED);
             handler.removeCallbacks(task);
+            removeAudioFocus();
         }
         context.stopService(new Intent(context, PlayerService.class));
     }
@@ -249,6 +250,7 @@ public class PlayerPresenter extends MvpPresenter<PlayerView> implements AudioMa
             @Override
             public void onStop() {
                 super.onStop();
+                stop();
             }
 
             @Override
