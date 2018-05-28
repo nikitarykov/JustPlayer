@@ -31,14 +31,6 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@id/audio_title"/>
 
-        <ImageButton
-            android:id="@+id/playlist_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/menu"
-            android:background="@null"/>
     </RelativeLayout>
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"

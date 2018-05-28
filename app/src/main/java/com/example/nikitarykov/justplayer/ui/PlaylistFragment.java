@@ -1,6 +1,5 @@
 package com.example.nikitarykov.justplayer.ui;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -15,12 +14,8 @@ import com.arellomobile.mvp.presenter.PresenterType;
 import com.example.nikitarykov.justplayer.R;
 import com.example.nikitarykov.justplayer.adapter.PlaylistAdapter;
 import com.example.nikitarykov.justplayer.model.Track;
-import com.example.nikitarykov.justplayer.presenter.PlayerPresenter;
 import com.example.nikitarykov.justplayer.presenter.PlaylistPresenter;
-import com.example.nikitarykov.justplayer.view.PlayerView;
 import com.example.nikitarykov.justplayer.view.PlaylistView;
-
-import java.util.List;
 
 /**
  * Created by Nikita Rykov on 20.12.2017.

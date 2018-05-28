@@ -4,8 +4,6 @@ import android.content.ContentResolver;
 import android.database.Cursor;
 import android.provider.MediaStore;
 
-import com.example.nikitarykov.justplayer.model.Track;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -71,7 +69,14 @@ public class TrackManager {
     }
 
     public void setCurTrackId(int curTrackId) {
-        this.curTrackId = curTrackId;
+        Track track = tracks.get(curTrackId);
+        if (track != null) {
+            for (int id = 0; id < playlist.size(); id++) {
+                if (track.getId() == playlist.get(id).getId()) {
+                    this.curTrackId = id;
+                }
+            }
+        }
     }
 
     public int getResumePosition() {

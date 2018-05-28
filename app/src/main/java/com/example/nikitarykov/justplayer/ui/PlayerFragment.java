@@ -1,12 +1,6 @@
 package com.example.nikitarykov.justplayer.ui;
 
-import android.content.ContentResolver;
-import android.content.ContentUris;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,16 +20,10 @@ import com.example.nikitarykov.justplayer.R;
 import com.example.nikitarykov.justplayer.presenter.PlayerPresenter;
 import com.example.nikitarykov.justplayer.view.PlayerView;
 
-import java.io.IOException;
-
-import javax.inject.Inject;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-
-import static android.graphics.Color.WHITE;
 
 public class PlayerFragment extends MvpAppCompatFragment implements PlayerView, SeekBar.OnSeekBarChangeListener {
 
@@ -73,9 +61,6 @@ public class PlayerFragment extends MvpAppCompatFragment implements PlayerView, 
 
     @BindView(R.id.random_button)
     ImageButton randomButton;
-
-    @BindView(R.id.playlist_button)
-    ImageButton playlistButton;
 
     @BindView(R.id.progress_bar)
     SeekBar progressBar;
@@ -122,15 +107,6 @@ public class PlayerFragment extends MvpAppCompatFragment implements PlayerView, 
     @OnClick(R.id.random_button)
     public void onRandom() {
         playerPresenter.setRandom(randomButton.isSelected());
-    }
-
-    @OnClick(R.id.playlist_button)
-    public void onOpenPlaylist() {
-        PlaylistFragment playlistFragment = new PlaylistFragment();
-        getActivity().getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, playlistFragment)
-                .addToBackStack(null)
-                .commit();
     }
 
     @Override
